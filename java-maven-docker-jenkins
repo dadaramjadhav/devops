@@ -1,4 +1,5 @@
 sudo apt update 
+
 sudo apt install openjdk-17-jdk-headless -y 
 
 sudo apt install maven -y
@@ -24,5 +25,4 @@ sudo apt-get install jenkins -y
 sudo usermod -aG docker jenkins
 
 sudo init 6
-
 
