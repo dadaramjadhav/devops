@@ -1,0 +1,76 @@
+
+pipeline {
+    agent any
+    tools {
+        maven 'maven3'
+    }
+    environment {
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/dadaramjadhav/docker-example.git'
+            }
+        }
+        stage('sonarqube analysis') {
+            steps {
+                withSonarQubeEnv('sonar-server') {
+                    sh ''' mvn clean verify sonar:sonar \
+                          -Dsonar.projectKey=myapp \
+                          -Dsonar.host.url=http://34.16.157.196:9000 \
+                          -Dsonar.login=sqp_216da62ba8f7fb77d6eacf9bd20644456e78903b '''
+                }
+            }
+        }
+        stage('dependency checht') {
+            steps {
+                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+        stage('TRIVY FS SCAN') {
+            steps {
+                sh "trivy fs . > trivyfs.txt"
+            }
+        }
+        stage('build and push docker image') {
+            steps {
+                script{
+                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
+                        sh 'docker build -t dadaramjadhav/de .'
+                        sh 'docker push dadaramjadhav/de '
+                    }
+                }
+            }
+        }
+        stage("TRIVY"){
+            steps{
+                sh "trivy image dadaramjadhav/de:latest > trivyimage.txt" 
+            }
+        }
+        stage('deploy to k8s') {
+            steps {
+                script{
+                    withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
+                                sh 'kubectl apply -f deployment.yml'
+                                sh 'kubectl apply -f service.yml'
+                    }
+                }
+            }
+        }
+        
+    }
+    post {
+     always {
+        emailext attachLog: true,
+            subject: "'${currentBuild.result}'",
+            body: "Project: ${env.JOB_NAME}<br/>" +
+                "Build Number: ${env.BUILD_NUMBER}<br/>" +
+                "URL: ${env.BUILD_URL}<br/>",
+            to: 'dmgcp22@gmail.com',
+            attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
+        }
+    }
+}
