@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/dadaramjadhav/docker-example.git'
+            }
+        }
+        stage('Deploy to GKE') {
+            steps{
+                step([$class: 'KubernetesEngineBuilder', projectId: 'upheld-beach-417514', clusterName: 'cluster-2', location:  'us-central1-c', manifestPattern: 'deployment.yml', credentialsId: 'gke', verifyDeployments: true])
+                step([$class: 'KubernetesEngineBuilder', projectId: 'upheld-beach-417514', clusterName: 'cluster-2', location:  'us-central1-c', manifestPattern: 'service.yml', credentialsId: 'gke', verifyDeployments: true])
+            }
+        }
+    }
+}
