@@ -74,7 +74,23 @@ ansible strategy
 
 
 ============================================================================================================================================================================================================================================================
+if working with 1000 hosts, it will pick up 5 hosts at a time and make necessary configuration, then 5 and so on
+default value is in ansible.cfg
+forks = 5 
 
+we can increase or decrease value
+
+
+executing tasks on hosts one by one 
+- name: print date
+  hosts: centos, ubuntu
+  serial: 1
+
+  tasks:
+  - name: print dt
+    command: date
+  - name: sleep
+    command: sleep 5
 
 
 ============================================================================================================================================================================================================================================================
