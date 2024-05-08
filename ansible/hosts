@@ -6,3 +6,35 @@ bar.example.com
 one.example.com
 two.example.com
 three.example.com
+
+[targets]
+
+localhost              ansible_connection=local
+other1.example.com     ansible_connection=ssh        ansible_user=myuser
+other2.example.com     ansible_connection=ssh        ansible_user=myotheruser
+
+[atlanta]
+host1 http_port=80 maxRequestsPerChild=808
+host2 http_port=303 maxRequestsPerChild=909
+
+#options to configure host
+ansible_connection
+ansible_host
+ansible_port
+ansible_user
+ansible_password
+ansible_ssh_private_key_file
+ansible_ssh_common_args
+ansible_sftp_extra_args
+ansible_scp_extra_args
+ansible_ssh_extra_args
+ansible_ssh_pipelining
+ansible_become
+ansible_become_method
+ansible_become_user
+ansible_become_password
+ansible_become_exe
+ansible_become_flags
+ansible_shell_type
+ansible_python_interpreter
+ansible_shell_executable
