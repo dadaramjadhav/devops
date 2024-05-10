@@ -1,0 +1,51 @@
+---
+- name: create group
+  group: name="{{groupId}}"
+  become: true
+
+- name: create user
+  user: 
+    name: "{{userId}}"
+    group: "{{groupId}}"
+    system: yes
+    shell: "/sbin/nologin"
+    comment: "{{userId}} nologin user"
+    createhome: "no"
+    state: present
+ 
+- name: install node exporter
+  unarchive:
+    src: "https://github.com/prometheus/node_exporter/releases/download/v{{ version }}/node_exporter-{{ version }}.linux-amd64.tar.gz"
+    dest: /tmp/
+    remote_src: yes
+
+- name: copy node exporter to bin folder
+  copy: 
+    src: "/tmp/node_exporter-{{ version }}.linux-amd64/node_exporter"
+    dest: "/usr/local/bin/node_exporter"
+    owner: "{{userId}}"
+    group: "{{groupId}}"
+    remote_src: yes
+    mode: 0755
+
+- name: delete tmp folder
+  file: 
+    path: "/tmp/node_exporter-{{ version }}.linux-amd64"
+    state: absent
+
+- name: copy file 
+  template:
+     src: init.service.j2
+     dest: /etc/systemd/system/node_exporter.service
+
+- name: start node_exporter
+  service:
+    name: node_exporter
+    state: started
+    enabled: yes
+
+- name: check connectivity
+  uri:
+    url: http://localhost:9100
+    method: GET
+    status_code: 200

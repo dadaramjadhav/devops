@@ -1,0 +1,19 @@
+---
+# tasks file for grafana
+- name: Install grafana
+  yum:
+    name: https://dl.grafana.com/enterprise/release/grafana-enterprise-8.2.3-1.x86_64.rpm  
+    state: latest
+
+
+- name: "Grafana server started"
+  service:
+    name: grafana-server
+    enabled: true
+    state: started
+
+- name: "Check if Grafana is accessible."
+  uri:
+    url: http://127.0.0.1:3000
+    method: GET
+    status_code: 200

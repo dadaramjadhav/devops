@@ -1,0 +1,7 @@
+---
+serviceName: "prometheus"
+groupId: "prometheus"
+userId: "prometheus"
+prom_version: 2.52.0
+exec_command: "/usr/local/bin/prometheus --config.file=/usr/local/bin/prometheus.yml --storage.tsdb.path=/data/prometheus"
+
