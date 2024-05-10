@@ -68,6 +68,3 @@
         groups: docker
         append: yes
       become: yes
-    - name: daemon-reload to pick up config changes
-      systemd:
-        daemon_reload: yes
