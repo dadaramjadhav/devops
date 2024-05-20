@@ -87,4 +87,7 @@ logrotate
 dnsserver
 
 
-  
+ACL ==> access control list ==> setfacl, getfacl
+
+
+env
