@@ -1,2 +1,5 @@
 sudo apt install shellcheck -y
 shellchek script.sh
+
+samba server
+nfs server
