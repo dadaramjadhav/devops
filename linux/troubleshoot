@@ -1,0 +1,88 @@
+dmesg 
+
+vmstat
+
+pidstat
+
+lscpu
+
+mtr ==> real time network monitoring  ==> e.g. mtr google.com
+
+mpstat ==> check every cpu usuage
+
+iostat  ==> check disk status
+
+free -m ==> free memory  (free -g, free -m , free -k)
+
+ifconfig
+
+ip r
+
+ss ==> check connection performance
+
+iftop ==> check network performance
+
+smem ==> check memory allocated per process
+ss  ==> system socket
+
+sudo netstat -tunlp
+
+telnet
+
+env
+
+lsof ==> list of open files
+
+df 
+
+id
+
+w
+
+nslookup
+
+uptime
+
+wall hello  ==> broadcast message to users
+
+who
+
+sort
+
+shutdown -h now
+
+shutdown -r now ==> restart
+
+whatis
+
+find
+
+fuser
+
+lsblk
+
+systecmctl is-enabled httpd
+systecmctl disabled httpd
+systecmctl mask httpd    ==> not able to start
+systecmctl unmask httpd
+systecmctl poweroff
+systecmctl reboot
+
+
+alias ==> create shortcup
+alias -p
+alias shortcut="actual command"
+
+.bashrc ==> for current user
+/etc/bashrc ===> for all users
+
+rsync ===> used to send big file, if updated , it will send only updated contents
+
+selinux  ==> sestatus or getenforce  ==> setenforce=0 / setenforce=1
+modify in sudo vi /etc/selinux/config 
+
+
+logrotate
+
+
+  
