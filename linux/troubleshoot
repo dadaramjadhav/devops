@@ -84,5 +84,7 @@ modify in sudo vi /etc/selinux/config
 
 logrotate
 
+dnsserver
+
 
   
