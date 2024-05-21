@@ -116,6 +116,19 @@ crontab
 
 at ==> schedule job once, at hh:mm, atq list jobs, atrm remvoe jobs, at 4:45 am, at 4pm + 4 days, at now + 5 hours, at 9:00am tommorow, at 10:00 am next month, at 10:00 am nov 30
 
+hostnamectl set-hostname newname
+
+create large file ==> fallocate -l 35m filename
+
+httpd server in centos ==> conf--> /etc/httpd/conf/httpd.conf, contents --> /var/www/html/, logs --> /var/log/httpd
+
+nginx ==> html file --> sudo vi /usr/share/nginx/html/, config file -->  sudo vi /etc/nginx/nginx.conf
+
+command for dns resolution  ==> ping, , nslookup, dig, host
+
+pidof httpd
+
+ps -l pid
 
 
-
+echo $RANDOM ==> random number generator
