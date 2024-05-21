@@ -7,7 +7,7 @@ pidstat
 lscpu
 dmidecode
 
-mtr ==> real time network monitoring  ==> e.g. mtr google.com
+mtr ==> real time network monitoring  ==> e.g. mtr google.com 
 
 mpstat ==> check every cpu usuage
 
