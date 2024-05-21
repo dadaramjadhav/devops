@@ -5,6 +5,7 @@ vmstat
 pidstat
 
 lscpu
+dmidecode
 
 mtr ==> real time network monitoring  ==> e.g. mtr google.com
 
@@ -91,3 +92,5 @@ ACL ==> access control list ==> setfacl, getfacl
 
 
 env
+
+shred ==> permenently delete file ==> shred -u filename, shred --remove finename
