@@ -1,0 +1,16 @@
+dry run of shell script ==> bash -n script.sh
+
+debug script ==> wrap code between   
+            set -x  ///code
+            set +x
+
+exit script if using undeclared variables
+        set -o nounset
+        or 
+        set -u
+
+exit script if command fails
+        set - errexit
+        set -e
+
+        
