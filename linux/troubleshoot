@@ -132,3 +132,5 @@ ps -l pid
 
 
 echo $RANDOM ==> random number generator
+
+lvm ==> logical volume manager
