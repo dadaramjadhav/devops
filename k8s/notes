@@ -1,0 +1,7 @@
+master: etcd, kube-apiserver, kube controller manager, kube schedular
+worker: kubelet, kubeproxy, container runtime
+container runtime : docker, containerd, rkt
+support different runtime with container runtime interface (CRI)
+docker shim
+etcd stores information about cluster, nodes, configs, secrets, accounts,   roles, bindings, others
+kube api server: authenticate user, validate request, retrieve data, update etcd , schedular, kubelet
