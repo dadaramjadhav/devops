@@ -20,5 +20,4 @@ ingress
 headless services
 helm
 argocd
-service mesh
-istio
+service mesh implementation using istio
