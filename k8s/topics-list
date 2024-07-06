@@ -13,7 +13,6 @@ storage
 networking
 security
 cluster setup
-resource quota
 taint toleration
 configmap, secret
 ingress
@@ -21,3 +20,12 @@ headless services
 helm
 argocd
 service mesh implementation using istio
+scheduling pod
+readiness and liveliness probe
+limitrange
+resource quota --> namespace level cpu and memory limits
+metric-server ==> monitor cluster ==> kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml (in minikube  minikube addons enable metrics-server)
+live logs kubectl logs -f app-7c754b8767-6p5vs
+application lifecycle management ==> rolling updates, initcontainer, multicontainer
+
+cluster maintainence ==> drain, cordon, uncordon
