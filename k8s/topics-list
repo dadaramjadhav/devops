@@ -1,6 +1,8 @@
 namespaces
 node
 pod
+daemonset
+static pods
 replicaset
 deployment
 services
@@ -22,8 +24,8 @@ application lifecycle management ==> rolling updates, initcontainer, multicontai
 
 pending
 
-daemonset
-static pods
+
+
 side car container
 headless services
 ingress 
@@ -32,3 +34,4 @@ security
 helm
 argocd
 service mesh implementation using istio
+elk stack in k8s
