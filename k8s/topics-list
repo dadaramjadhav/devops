@@ -5,27 +5,12 @@ replicaset
 deployment
 services
 ingress
-
 storage ==> emptyDir, hostPath, persistentDisk(static provisioing), persistentDisk(dynamic provisioing)
 statefulset  ==> mysql, use pv, pvc, sc
 configmap, secret
-
-daemonset
-static pods
-side car container
- 
-networking
-security
 cluster setup
 taint toleration
 cluster maintainence ==> drain, cordon, uncordon
-
-
- 
-headless services
-helm
-argocd
-service mesh implementation using istio
 scheduling pod
 readiness and liveliness probe
 limitrange
@@ -33,3 +18,17 @@ resource quota --> namespace level cpu and memory limits
 metric-server ==> monitor cluster ==> kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml (in minikube  minikube addons enable metrics-server)
 live logs kubectl logs -f app-7c754b8767-6p5vs
 application lifecycle management ==> rolling updates, initcontainer, multicontainer
+
+
+pending
+
+daemonset
+static pods
+side car container
+headless services
+ingress 
+networking
+security
+helm
+argocd
+service mesh implementation using istio
