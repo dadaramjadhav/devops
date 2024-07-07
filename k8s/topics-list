@@ -3,19 +3,25 @@ node
 pod
 replicaset
 deployment
-service
-statefulset
-daemon set
+services
+ingress
+
+storage ==> emptyDir, hostPath, persistentDisk(static provisioing), persistentDisk(dynamic provisioing)
+statefulset  ==> mysql, use pv, pvc, sc
+configmap, secret
+
+daemonset
 static pods
 side car container
-services
-storage ==> emptyDir, hostPath, persistentDisk(static provisioing), persistentDisk(dynamic provisioing)
+ 
 networking
 security
 cluster setup
 taint toleration
-configmap, secret
-ingress
+cluster maintainence ==> drain, cordon, uncordon
+
+
+ 
 headless services
 helm
 argocd
@@ -27,5 +33,3 @@ resource quota --> namespace level cpu and memory limits
 metric-server ==> monitor cluster ==> kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml (in minikube  minikube addons enable metrics-server)
 live logs kubectl logs -f app-7c754b8767-6p5vs
 application lifecycle management ==> rolling updates, initcontainer, multicontainer
-
-cluster maintainence ==> drain, cordon, uncordon
