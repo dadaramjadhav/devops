@@ -2,7 +2,6 @@ namespaces
 node
 pod
 daemonset
-static pods
 replicaset
 deployment
 services
@@ -31,6 +30,7 @@ headless services
 ingress 
 networking
 security
+static pods
 helm
 argocd
 service mesh implementation using istio
