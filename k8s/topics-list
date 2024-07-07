@@ -9,7 +9,7 @@ daemon set
 static pods
 side car container
 services
-storage
+storage ==> emptyDir, hostPath, persistentDisk(static provisioing), persistentDisk(dynamic provisioing)
 networking
 security
 cluster setup
