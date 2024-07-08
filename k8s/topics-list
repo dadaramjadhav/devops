@@ -5,7 +5,6 @@ daemonset
 replicaset
 deployment
 services
-ingress
 storage ==> emptyDir, hostPath, persistentDisk(static provisioing), persistentDisk(dynamic provisioing)
 statefulset  ==> mysql, use pv, pvc, sc
 configmap, secret
@@ -21,13 +20,18 @@ live logs kubectl logs -f app-7c754b8767-6p5vs
 application lifecycle management ==> rolling updates, initcontainer, multicontainer
 helm
 argocd
+multicontainer ==> init container, side car container
 
 
 pending
-side car container
+daemonset ==> demo
 headless services
-ingress 
-networking
+ingress ==> demo
+stateful set ==> demo
+jobs and cronjobs
+networking policies
+service account
+rbac
 security
 static pods
 service mesh implementation using istio
