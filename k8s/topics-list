@@ -20,6 +20,7 @@ metric-server ==> monitor cluster ==> kubectl apply -f https://github.com/kubern
 live logs kubectl logs -f app-7c754b8767-6p5vs
 application lifecycle management ==> rolling updates, initcontainer, multicontainer
 helm
+argocd
 
 
 pending
@@ -29,6 +30,5 @@ ingress
 networking
 security
 static pods
-argocd
 service mesh implementation using istio
 elk stack in k8s
