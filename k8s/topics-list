@@ -21,6 +21,7 @@ application lifecycle management ==> rolling updates, initcontainer, multicontai
 helm
 argocd
 multicontainer ==> init container, side car container
+networking policies  ==> calico
 
 
 pending
@@ -29,7 +30,6 @@ headless services
 ingress ==> demo
 stateful set ==> demo
 jobs and cronjobs
-networking policies
 service account
 rbac
 security
