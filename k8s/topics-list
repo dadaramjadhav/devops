@@ -22,17 +22,18 @@ helm
 argocd
 multicontainer ==> init container, side car container
 networking policies  ==> calico
+jobs and cronjobs
+static pods
+daemonset
+security
+service account
+rbac
 
 
 pending
-daemonset ==> demo
 headless services
-ingress ==> demo
 stateful set ==> demo
-jobs and cronjobs
-service account
-rbac
-security
-static pods
-service mesh implementation using istio
+
+ingress ==> demo
 elk stack in k8s
+service mesh implementation using istio
