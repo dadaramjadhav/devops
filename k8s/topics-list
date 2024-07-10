@@ -42,8 +42,8 @@ create user: https://www.youtube.com/watch?v=r_fSTn_Ixuk,  https://www.youtube.c
 headless services
 stateful set ==> demo
 ingress ==> demo
-
-
+secure k8s ==> secure api server, rbac, network policies, encryption at rest(etcd), secure images, cluster monitoring, frequent upgrades
+admission controller ==> Kyverno
 
 pending
 elk stack in k8s
