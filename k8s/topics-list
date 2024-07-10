@@ -41,9 +41,10 @@ kube api server: authenticate user, validate request, retrieve data, update etcd
 create user: https://www.youtube.com/watch?v=r_fSTn_Ixuk,  https://www.youtube.com/watch?v=EUGfQS2Fu78, https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
 headless services
 stateful set ==> demo
+ingress ==> demo
+
 
 
 pending
-ingress ==> demo
 elk stack in k8s
 service mesh implementation using istio
