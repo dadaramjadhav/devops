@@ -27,6 +27,7 @@ static pods
 daemonset
 security
 service account
+security-context ==> change default user. default user is root
 rbac
 master: etcd, kube-apiserver, kube controller manager, kube schedular
 worker: kubelet, kubeproxy, container runtime
