@@ -39,13 +39,11 @@ docker shim
 etcd stores information about cluster, nodes, configs, secrets, accounts,   roles, bindings, others
 kube api server: authenticate user, validate request, retrieve data, update etcd , schedular, kubelet
 create user: https://www.youtube.com/watch?v=r_fSTn_Ixuk,  https://www.youtube.com/watch?v=EUGfQS2Fu78, https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
-
-
-
-pending
 headless services
 stateful set ==> demo
 
+
+pending
 ingress ==> demo
 elk stack in k8s
 service mesh implementation using istio
