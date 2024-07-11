@@ -45,7 +45,7 @@ ingress ==> demo
 secure k8s ==> secure api server, rbac, network policies, encryption at rest(etcd), secure images, cluster monitoring, frequent upgrades
 admission controller ==> Kyverno (https://github.com/kaiwalyakoparkar/practical-devops)
 tilt in k8s for debugging, live reloading, deployment flow
-multimaster k8s cluster ==>https://www.youtube.com/watch?v=Zxozz8P_l5M
+multimaster k8s cluster ==>https://www.youtube.com/watch?v=Zxozz8P_l5M, https://www.youtube.com/watch?v=c1SCdv2hYDc
 
 
 
