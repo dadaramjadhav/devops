@@ -50,5 +50,5 @@ multimaster k8s cluster ==>https://www.youtube.com/watch?v=Zxozz8P_l5M, https://
 
 
 pending
-elk stack in k8s
+elk stack in k8s ==> https://github.com/ashokitschool/kubernetes_manifest_yml_files/tree/main/04-EFK-Log
 service mesh implementation using istio
