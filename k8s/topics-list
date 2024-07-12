@@ -49,3 +49,4 @@ multimaster k8s cluster ==>https://www.youtube.com/watch?v=Zxozz8P_l5M, https://
 
 elk stack in k8s ==> https://github.com/ashokitschool/kubernetes_manifest_yml_files/tree/main/04-EFK-Log
 service mesh implementation using istio ==> https://www.youtube.com/watch?v=voAyroDb6xk&t=696s, https://www.youtube.com/playlist?list=PL1olyoIeIWuQ2m-Y0rLUzyDjSNX9bhuku
+gateway api: https://www.youtube.com/watch?v=Zqlwn5TZknI
