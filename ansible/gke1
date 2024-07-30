@@ -1,5 +1,6 @@
+create iam role with Kubernetes Engine Admin and Service Account User role
 ansible-galaxy collection install google.cloud
-  pip install requests google-auth
+pip install requests google-auth
 
 ====================================================================================================================================================================================================================================================================
 
