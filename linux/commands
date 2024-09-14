@@ -130,6 +130,8 @@ pidof httpd
 
 ps -l pid
 
+ln --> make soft and hard link
+
 
 echo $RANDOM ==> random number generator
 
